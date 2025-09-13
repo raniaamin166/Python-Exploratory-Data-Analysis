@@ -272,37 +272,13 @@ plt.show()
  , color=
  'yellow')
 # Custom subplot combining histogram and scatterplot
- fig, axes =
- plt.subplots(1
- df[df[
- 'species'
- , 2
- , figsize=(
- 12, 5
- ] == 
-'setosa'
- ))
- ].hist(column=
- 'petal_length'
- color=
- 'purple')
- sns.scatterplot(x=
- data=
- df, ax=
- 'sepal_length'
- axes[1
- ])
- axes[0
- axes[1
- , y=
- 'petal_width'
- , ax=
- axes[0
- ], 
-, hue=
- 'species', 
-].set_title(
- "Histogram: Petal Length (Setosa)")
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+df[df['species'] == 'setosa'].hist(column='petal_length', ax=axes[0], color='purple')
+sns.scatterplot(x='sepal_length', y='petal_width', hue='species', data=df, ax=axes[1])
+axes[0].set_title("Histogram: Petal Length (Setosa)")
+axes[1].set_title("Scatter: Petal Length vs Width")
+plt.tight_layout()
+plt.show()
  ].set_title(
  "Scatter: Petal Length vs Width")
  plt.tight_layout()
