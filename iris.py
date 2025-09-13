@@ -57,8 +57,8 @@ into intervals (bins) and counting how many data points fall into each bin.
  This clearly shows class separation in petal length.
  Boxplot
  A boxplot (or box-and-whisker plot) is a statistical graph that summarizes the distribution of a 
-numeric feature using 5 key values:-Minimum-First quartile (Q1 – 25%)-Median (Q2 – 50%)-Third quartile (Q3 – 75%)-Maximum
- It also highlights outliers (points outside 1.5× IQR from Q1 or Q3).
+numeric feature using 5 key values
+ It also highlights outliers 
  In the Iris Dataset:
  When we plot a boxplot of petal_length across species:-We can compare the central tendency and spread between species.-It visually shows how distinct the species are based on the feature.-Outliers, if any, will be clearly visible.
  Example Insight:-Setosa has a very small and tight box (low variation).-Versicolor shows moderate spread.-Virginica has the largest values and some variability.
