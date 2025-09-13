@@ -182,7 +182,7 @@ shape of a numeric variable for different categories, along with summary statist
  Insights:-Wider parts of the violin indicate more data points at that value.-You can see if the data is skewed or bimodal within a species.-It gives more detail than a boxplot about distribution shape.
  Swarm Plot
  A swarm plot is a scatter plot where data points are adjusted (jittered) along the categorical axis 
-so they don’t overlap. It shows all individual data points and their distribution.
+so they dont overlap. It shows all individual data points and their distribution.
  Features:-Each point represents one observation.-Points are spread out (like bees in a swarm) to avoid overlap.-Useful for visualizing data density and outliers.
  Insights:
 -Shows exact data points (not summarized).-Reveals clusters and potential outliers clearly.-Complements violin or boxplots for granular understanding.
