@@ -101,8 +101,8 @@ numeric feature using 5 key values.
 
 Histogram vs Boxplot | Feature | Histogram | Boxplot | | -------------- | ------------------------------------------- | -------------------------------------------- | | Focus | 
 Frequency distribution | Summary statistics (median, quartiles, etc.) | | Best for | Seeing overall 
-shape (normal, skewed, etc.) | Comparing distributions across groups | | Shows outliers | 🌼 No | 🌼 
-Yes | | Shows median | 🌼 No (only visually estimated) | 🌼 Yes |
+shape (normal, skewed, etc.) | Comparing distributions across groups | | Shows outliers |  No |  
+Yes | | Shows median |  No (only visually estimated) |  Yes |
  import
  matplotlib.pyplot 
 # Histograms
@@ -154,10 +154,10 @@ single data observation.
  Best for Overall relationships & class separation Detailed analysis of a selected pair
  Shows 
 diagonal
- 🌼 Histograms/KDE plots 🌼 No
+ Histograms/KDE plots  No
  Hue 
 supported
- 🌼 Yes 🌼 Yes
+  Yes  Yes
  # Pairplot
  custom_palette_pairplot = {"setosa": "pink", "versicolor": "purple", 
 "virginica": "yellow"}
