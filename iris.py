@@ -156,7 +156,7 @@ STEP 6: CORRELATION ANALYSIS
  "Correlation Heatmap")
  plt.show()
 
- 1) Petal length & petal width (correlation = 0.96)
+ 1)Petal length & petal width (correlation = 0.96)
  Strong positive correlation
  Strong positive correlation
  Very weak negative correlation
@@ -164,9 +164,9 @@ STEP 6: CORRELATION ANALYSIS
  Moderate negative correlation
  Very strong positive correlation-These two features are almost perfectly linearly related.-This indicates they convey similar information and are excellent 
 predictors for species classification.
- 2) Sepal length & petal length (correlation = 0.87)-Also highly correlated, meaning longer sepals are often accompanied 
+ 2)Sepal length & petal length (correlation = 0.87)-Also highly correlated, meaning longer sepals are often accompanied 
 by longer petals.
- 3) Sepal width has weak or moderate negative correlations with other features:
+ 3)Sepal width has weak or moderate negative correlations with other features:
 -It tends to slightly decrease as the other features increase.-This suggests sepal width behaves differently from the other 
 measurements.
  Color Interpretation (with coolwarm colormap):-Red indicates strong positive correlation (closer to +1)-Blue indicates strong negative correlation (closer to -1)-White/light indicates no correlation (around 0)
