@@ -170,8 +170,8 @@ by longer petals.
 -It tends to slightly decrease as the other features increase.-This suggests sepal width behaves differently from the other 
 measurements.
  Color Interpretation (with coolwarm colormap):-Red indicates strong positive correlation (closer to +1)-Blue indicates strong negative correlation (closer to -1)-White/light indicates no correlation (around 0)
- The reddest square is between petal_length and petal_width (≈ 0.96).
- The bluest ones are the correlations involving sepal_width with petal features (≈ -0.4).
+ The reddest square is between petal_length and petal_width (0.96).
+ The bluest ones are the correlations involving sepal_width with petal features (-0.4).
  STEP 7: GROUPED VISUALIZATIONS
  Grouped Visualizations
  Violin plots and swarm plots show feature distribution and individual data points grouped by 
