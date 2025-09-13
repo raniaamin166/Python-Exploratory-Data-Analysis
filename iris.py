@@ -1,7 +1,7 @@
-IRIS_DATASET - EXPLORATORY_DATA 
+IRIS DATASET - EXPLORATORY DATA 
 ANALYSIS (EDA)
-STEP_1: LOAD THE IRIS DATASET
-Load the Iris Dataset
+ STEP 1: LOAD THE IRIS DATASET
+ Load the Iris Dataset
  The Iris dataset is a classic dataset in machine learning and statistics. It contains 150 samples 
 from three species of Iris flowers (setosa, versicolor, virginica), with four features: sepal 
 length, sepal width, petal length, and petal width.
@@ -11,12 +11,7 @@ length, sepal width, petal length, and petal width.
  df = sns.load_dataset('iris')
  Display first 5 rows
  df.head()
-   sepal_length  sepal_width  petal_length  petal_width species
- 0           5.1          3.5           1.4          0.2  setosa
- 1           4.9          3.0           1.4          0.2  setosa
- 2           4.7          3.2           1.3          0.2  setosa
- 3           4.6          3.1           1.5          0.2  setosa
- 4           5.0          3.6           1.4          0.2  setosa
+  
  STEP 2: BASIC DATASET INFORMATION
  Basic Dataset Information
  This step provides a general overview of the dataset including shape, missing values, and 
@@ -26,31 +21,11 @@ data types.
  print(df.info())
  print("\nMissing Values:")
  print(df.isnull().sum())
- Dataset Shape: (150, 5)
- Data Types and Info:
- <class 'pandas.core.frame.DataFrame'>
-RangeIndex: 150 entries, 0 to 149
- Data columns (total 5 columns):
- #   Column        Non-Null Count  Dtype  ---  ------        --------------  -----  
- 0   sepal_length  150 non-null    float64
- 1   sepal_width   150 non-null    float64
- 2   petal_length  150 non-null    float64
- 3   petal_width   150 non-null    float64
- 4   species       150 non-null    object 
-dtypes: float64(4), object(1)
- memory usage: 6.0+ KB
- None
- Missing Values:
- sepal_length    0
- sepal_width     0
- petal_length    0
- petal_width     0
- species         0
- dtype: int64
+
  STEP 3: DESCRIPTIVE STATISTICS
  Descriptive Statistics
  Summary statistics help us understand the central tendency, dispersion, and shape of the 
-distribution of the datasets features.
+distribution of the dataset’s features.
  Descriptive statistics summarize and describe the main features of a dataset using numerical 
 values. These values provide insights into:-Central tendency (where data tends to cluster)-Dispersion (how spread out the data is)-Shape of the distribution (symmetry, skewness, etc.)
  Why Is This Important?-Helps compare species across features.-Identifies outliers or unexpected values.-Prepares you for visualization and feature engineering.-Enables better data-driven decisions before modeling.
@@ -67,18 +42,7 @@ within each species.
  # Group-wise standard deviation
  print("\nGroup-wise Standard Deviation:")
  print(df.groupby('species').std())
- Group-wise Mean:
-            sepal_length  sepal_width  petal_length  petal_width
- species                                                         
-setosa             5.006        3.428         1.462        0.246
- versicolor         5.936        2.770         4.260        1.326
- virginica          6.588        2.974         5.552        2.026
- Group-wise Standard Deviation:
-            sepal_length  sepal_width  petal_length  petal_width
- species                                                         
-setosa          0.352490     0.379064      0.173664     0.105386
- versicolor      0.516171     0.313798      0.469911     0.197753
- virginica       0.635880     0.322497      0.551895     0.274650
+ 
  STEP 4: VISUALIZE FEATURE DISTRIBUTIONS
  Visualize Feature Distributions
  Histograms and boxplots help visualize the distribution and spread of features.
@@ -86,15 +50,15 @@ setosa          0.352490     0.379064      0.173664     0.105386
  A histogram is a plot that shows the distribution of a single numeric feature by dividing the data 
 into intervals (bins) and counting how many data points fall into each bin.
  In the Iris Dataset:
- When we plot histograms for features like sepal_length, petal_length, etc., we are visualizing:
+ When we plot histograms for features like sepal_length, petal_length, etc., we're visualizing:
 -How the values are distributed (e.g., normal, skewed)-Where the concentration of values lies
  Example Insight:
- In a histogram of petal_length:-Setosa values are concentrated around 1,2 cm-Versicolor values appear in the 3,5 cm range-Virginica values fall around 5,7 cm
+ In a histogram of petal_length:-Setosa values are concentrated around 1–2 cm-Versicolor values appear in the 3–5 cm range-Virginica values fall around 5–7 cm
  This clearly shows class separation in petal length.
  Boxplot
  A boxplot (or box-and-whisker plot) is a statistical graph that summarizes the distribution of a 
-numeric feature using 5 key values.
- It also highlights outliers (points outside 1.5 IQR from Q1 or Q3).
+numeric feature using 5 key values:-Minimum-First quartile (Q1 – 25%)-Median (Q2 – 50%)-Third quartile (Q3 – 75%)-Maximum
+ It also highlights outliers (points outside 1.5× IQR from Q1 or Q3).
  In the Iris Dataset:
  When we plot a boxplot of petal_length across species:-We can compare the central tendency and spread between species.-It visually shows how distinct the species are based on the feature.-Outliers, if any, will be clearly visible.
  Example Insight:-Setosa has a very small and tight box (low variation).-Versicolor shows moderate spread.-Virginica has the largest values and some variability.
@@ -130,34 +94,34 @@ Yes | | Shows median |  No (only visually estimated) |  Yes |
 STEP 5: EXPLORE PAIRWISE RELATIONSHIPS
  Explore Pairwise Relationships
  Pairplots and scatter plots help identify patterns and separations between species.
- Pairplot
+ 📊 Pairplot
  A pairplot is a grid of scatterplots that shows the pairwise relationships between multiple 
-features in the dataset. Its a very handy way to explore how features interact and whether 
+features in the dataset. It’s a very handy way to explore how features interact and whether 
 patterns emerge by class.
- Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
+ 📊 Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
 feature.-It can be color-coded by a categorical variable like species using 
 hue.
- In the Iris Dataset:
+ 📊 In the Iris Dataset:
  This helps us:
 -Visualize class separation (e.g., petal features clearly separate 
 species)-Detect correlations between features-Spot potential outliers
- Example Insight:-Petal length and petal width show strong linear separation between 
-species.-Setosa is completely separated in multiple pairwise plots, very 
+ 📊 Example Insight:-Petal length and petal width show strong linear separation between 
+species.-Setosa is completely separated in multiple pairwise plots — very 
 distinguishable.-Versicolor and Virginica overlap more but still show some separation.
- Scatterplot
+ 📊 Scatterplot
  A scatterplot shows the relationship between two numeric variables. Each point represents a 
 single data observation.
- Example Insight:-Setosa forms a tight cluster at the bottom-left.-Virginica spreads widely in the top-right.-Versicolor appears in-between, sometimes overlapping both.
- Pairplot vs Scatterplot
+ 📊 Example Insight:-Setosa forms a tight cluster at the bottom-left.-Virginica spreads widely in the top-right.-Versicolor appears in-between, sometimes overlapping both.
+ 📊 Pairplot vs Scatterplot
  Feature Pairplot Scatterplot
  Compares All pairs of features A specific pair of features
  Best for Overall relationships & class separation Detailed analysis of a selected pair
  Shows 
 diagonal
- Histograms/KDE plots  No
+ 🌼 Histograms/KDE plots 🌼 No
  Hue 
 supported
-  Yes  Yes
+ 🌼 Yes 🌼 Yes
  # Pairplot
  custom_palette_pairplot = {"setosa": "pink", "versicolor": "purple", 
 "virginica": "yellow"}
@@ -191,24 +155,7 @@ STEP 6: CORRELATION ANALYSIS
  plt.title(
  "Correlation Heatmap")
  plt.show()
-Feature 1
- Feature 2
- petal_length
- petal_width
- sepal_length
- petal_length
- petal_width
- petal_width
- Correlation Interpretation
- sepal_length
- sepal_length
- sepal_width
- sepal_width
- sepal_width
- petal_length
- 0.87
- 0.82-0.12-0.43-0.37
- 0.96
+
  1) Petal length & petal width (correlation = 0.96)
  Strong positive correlation
  Strong positive correlation
@@ -229,17 +176,17 @@ measurements.
  Grouped Visualizations
  Violin plots and swarm plots show feature distribution and individual data points grouped by 
 species.
- 📊 Violin Plot
+ Violin Plot
  A violin plot combines aspects of a boxplot and a kernel density plot. It shows the distribution 
 shape of a numeric variable for different categories, along with summary statistics.
- 📊 Insights:-Wider parts of the violin indicate more data points at that value.-You can see if the data is skewed or bimodal within a species.-It gives more detail than a boxplot about distribution shape.
- 📊 Swarm Plot
+ Insights:-Wider parts of the violin indicate more data points at that value.-You can see if the data is skewed or bimodal within a species.-It gives more detail than a boxplot about distribution shape.
+ Swarm Plot
  A swarm plot is a scatter plot where data points are adjusted (jittered) along the categorical axis 
 so they don’t overlap. It shows all individual data points and their distribution.
- 📊 Features:-Each point represents one observation.-Points are spread out (like bees in a swarm) to avoid overlap.-Useful for visualizing data density and outliers.
- 📊 Insights:
+ Features:-Each point represents one observation.-Points are spread out (like bees in a swarm) to avoid overlap.-Useful for visualizing data density and outliers.
+ Insights:
 -Shows exact data points (not summarized).-Reveals clusters and potential outliers clearly.-Complements violin or boxplots for granular understanding.
- 📊 Violin Plot vs Swarm Plot
+ Violin Plot vs Swarm Plot
  Feature
  Violin Plot
  Swarm Plot
