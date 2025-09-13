@@ -126,7 +126,7 @@ Yes | | Shows median |  No (only visually estimated) |  Yes |
  plt.title(
  "Boxplot of Petal Length by Species")
  plt.show()
- <Figure size 1000x800 with 0 Axes>
+
 STEP 5: EXPLORE PAIRWISE RELATIONSHIPS
  Explore Pairwise Relationships
  Pairplots and scatter plots help identify patterns and separations between species.
