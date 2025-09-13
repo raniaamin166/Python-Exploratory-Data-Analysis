@@ -1,7 +1,7 @@
 IRIS_DATASET - EXPLORATORY_DATA 
 ANALYSIS (EDA)
- STEP 1: LOAD THE IRIS DATASET
- Load the Iris Dataset
+STEP 1: LOAD THE IRIS DATASET
+Load the Iris Dataset
  The Iris dataset is a classic dataset in machine learning and statistics. It contains 150 samples 
 from three species of Iris flowers (setosa, versicolor, virginica), with four features: sepal 
 length, sepal width, petal length, and petal width.
