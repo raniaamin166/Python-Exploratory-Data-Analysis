@@ -142,7 +142,7 @@ hue.
 -Visualize class separation (e.g., petal features clearly separate 
 species)-Detect correlations between features-Spot potential outliers
  Example Insight:-Petal length and petal width show strong linear separation between 
-species.-Setosa is completely separated in multiple pairwise plots — very 
+species.-Setosa is completely separated in multiple pairwise plots, very 
 distinguishable.-Versicolor and Virginica overlap more but still show some separation.
  Scatterplot
  A scatterplot shows the relationship between two numeric variables. Each point represents a 
