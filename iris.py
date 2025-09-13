@@ -82,22 +82,22 @@ setosa          0.352490     0.379064      0.173664     0.105386
  STEP 4: VISUALIZE FEATURE DISTRIBUTIONS
  Visualize Feature Distributions
  Histograms and boxplots help visualize the distribution and spread of features.
- 📊 Histogram
+ Histogram
  A histogram is a plot that shows the distribution of a single numeric feature by dividing the data 
 into intervals (bins) and counting how many data points fall into each bin.
- 📊 In the Iris Dataset:
+ In the Iris Dataset:
  When we plot histograms for features like sepal_length, petal_length, etc., we're visualizing:
 -How the values are distributed (e.g., normal, skewed)-Where the concentration of values lies
- 📊 Example Insight:
+ Example Insight:
  In a histogram of petal_length:-Setosa values are concentrated around 1–2 cm-Versicolor values appear in the 3–5 cm range-Virginica values fall around 5–7 cm
  This clearly shows class separation in petal length.
- 📊 Boxplot
+ Boxplot
  A boxplot (or box-and-whisker plot) is a statistical graph that summarizes the distribution of a 
 numeric feature using 5 key values:-Minimum-First quartile (Q1 – 25%)-Median (Q2 – 50%)-Third quartile (Q3 – 75%)-Maximum
  It also highlights outliers (points outside 1.5× IQR from Q1 or Q3).
- 📊 In the Iris Dataset:
+ In the Iris Dataset:
  When we plot a boxplot of petal_length across species:-We can compare the central tendency and spread between species.-It visually shows how distinct the species are based on the feature.-Outliers, if any, will be clearly visible.
- 📊 Example Insight:-Setosa has a very small and tight box (low variation).-Versicolor shows moderate spread.-Virginica has the largest values and some variability.
+ Example Insight:-Setosa has a very small and tight box (low variation).-Versicolor shows moderate spread.-Virginica has the largest values and some variability.
 �
 � Histogram vs Boxplot | Feature | Histogram | Boxplot | | -------------- | ------------------------------------------- | -------------------------------------------- | | Focus | 
 Frequency distribution | Summary statistics (median, quartiles, etc.) | | Best for | Seeing overall 
@@ -130,25 +130,25 @@ Yes | | Shows median | 🌼 No (only visually estimated) | 🌼 Yes |
 STEP 5: EXPLORE PAIRWISE RELATIONSHIPS
  Explore Pairwise Relationships
  Pairplots and scatter plots help identify patterns and separations between species.
- 📊 Pairplot
+ Pairplot
  A pairplot is a grid of scatterplots that shows the pairwise relationships between multiple 
 features in the dataset. It’s a very handy way to explore how features interact and whether 
 patterns emerge by class.
- 📊 Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
+ Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
 feature.-It can be color-coded by a categorical variable like species using 
 hue.
- 📊 In the Iris Dataset:
+ In the Iris Dataset:
  This helps us:
 -Visualize class separation (e.g., petal features clearly separate 
 species)-Detect correlations between features-Spot potential outliers
- 📊 Example Insight:-Petal length and petal width show strong linear separation between 
+ Example Insight:-Petal length and petal width show strong linear separation between 
 species.-Setosa is completely separated in multiple pairwise plots — very 
 distinguishable.-Versicolor and Virginica overlap more but still show some separation.
- 📊 Scatterplot
+ Scatterplot
  A scatterplot shows the relationship between two numeric variables. Each point represents a 
 single data observation.
- 📊 Example Insight:-Setosa forms a tight cluster at the bottom-left.-Virginica spreads widely in the top-right.-Versicolor appears in-between, sometimes overlapping both.
- 📊 Pairplot vs Scatterplot
+ Example Insight:-Setosa forms a tight cluster at the bottom-left.-Virginica spreads widely in the top-right.-Versicolor appears in-between, sometimes overlapping both.
+ Pairplot vs Scatterplot
  Feature Pairplot Scatterplot
  Compares All pairs of features A specific pair of features
  Best for Overall relationships & class separation Detailed analysis of a selected pair
