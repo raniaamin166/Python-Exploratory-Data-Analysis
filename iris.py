@@ -50,7 +50,7 @@ dtypes: float64(4), object(1)
  STEP 3: DESCRIPTIVE STATISTICS
  Descriptive Statistics
  Summary statistics help us understand the central tendency, dispersion, and shape of the 
-distribution of the dataset’s features.
+distribution of the datasets features.
  Descriptive statistics summarize and describe the main features of a dataset using numerical 
 values. These values provide insights into:-Central tendency (where data tends to cluster)-Dispersion (how spread out the data is)-Shape of the distribution (symmetry, skewness, etc.)
  Why Is This Important?-Helps compare species across features.-Identifies outliers or unexpected values.-Prepares you for visualization and feature engineering.-Enables better data-driven decisions before modeling.
