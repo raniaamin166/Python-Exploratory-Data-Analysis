@@ -94,34 +94,34 @@ Yes | | Shows median |  No (only visually estimated) |  Yes |
 STEP 5: EXPLORE PAIRWISE RELATIONSHIPS
  Explore Pairwise Relationships
  Pairplots and scatter plots help identify patterns and separations between species.
- 📊 Pairplot
+ Pairplot
  A pairplot is a grid of scatterplots that shows the pairwise relationships between multiple 
 features in the dataset. It’s a very handy way to explore how features interact and whether 
 patterns emerge by class.
- 📊 Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
+ Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
 feature.-It can be color-coded by a categorical variable like species using 
 hue.
- 📊 In the Iris Dataset:
+ In the Iris Dataset:
  This helps us:
 -Visualize class separation (e.g., petal features clearly separate 
 species)-Detect correlations between features-Spot potential outliers
- 📊 Example Insight:-Petal length and petal width show strong linear separation between 
+ Example Insight:-Petal length and petal width show strong linear separation between 
 species.-Setosa is completely separated in multiple pairwise plots — very 
 distinguishable.-Versicolor and Virginica overlap more but still show some separation.
- 📊 Scatterplot
+ Scatterplot
  A scatterplot shows the relationship between two numeric variables. Each point represents a 
 single data observation.
- 📊 Example Insight:-Setosa forms a tight cluster at the bottom-left.-Virginica spreads widely in the top-right.-Versicolor appears in-between, sometimes overlapping both.
- 📊 Pairplot vs Scatterplot
+ Example Insight:-Setosa forms a tight cluster at the bottom-left.-Virginica spreads widely in the top-right.-Versicolor appears in-between, sometimes overlapping both.
+ Pairplot vs Scatterplot
  Feature Pairplot Scatterplot
  Compares All pairs of features A specific pair of features
  Best for Overall relationships & class separation Detailed analysis of a selected pair
  Shows 
 diagonal
- 🌼 Histograms/KDE plots 🌼 No
+ Histograms/KDE plots  No
  Hue 
 supported
- 🌼 Yes 🌼 Yes
+ Yes Yes
  # Pairplot
  custom_palette_pairplot = {"setosa": "pink", "versicolor": "purple", 
 "virginica": "yellow"}
