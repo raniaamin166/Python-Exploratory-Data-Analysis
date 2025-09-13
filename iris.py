@@ -67,29 +67,20 @@ Histogram vs Boxplot | Feature | Histogram | Boxplot | | -------------- | ------
 Frequency distribution | Summary statistics (median, quartiles, etc.) | | Best for | Seeing overall 
 shape (normal, skewed, etc.) | Comparing distributions across groups | | Shows outliers |  No |  
 Yes | | Shows median |  No (only visually estimated) |  Yes |
- import
- matplotlib.pyplot 
+
+import matplotlib.pyplot as plt
+
 # Histograms
- plt.figure(figsize=(
- as plt
- 10, 8
- ))
- df.hist(figsize=(
- 10, 8
- plt.tight_layout()
- plt.show()
- ),color=
- 'pink')
- # Boxplot for one feature by species
- sns.boxplot(x=
- 'species'
- , y=
- 'petal_length'
- , data=
- df)
- plt.title(
- "Boxplot of Petal Length by Species")
- plt.show()
+plt.figure(figsize=(10, 8))
+df.hist(figsize=(10, 8),color='pink')
+plt.tight_layout()
+plt.show()
+
+# Boxplot for one feature by species
+sns.boxplot(x='species', y='petal_length', data=df)
+plt.title("Boxplot of Petal Length by Species")
+plt.show()
+
 
 STEP 5: EXPLORE PAIRWISE RELATIONSHIPS
  Explore Pairwise Relationships
@@ -122,39 +113,25 @@ diagonal
  Hue 
 supported
  Yes Yes
- # Pairplot
- custom_palette_pairplot = {"setosa": "pink", "versicolor": "purple", 
-"virginica": "yellow"}
- sns.pairplot(df, hue='species', palette=custom_palette_pairplot)
- plt.show()
- # Scatterplot
- custom_palette = {"setosa": "green", "versicolor": "grey", 
-"virginica": "orange"}
-sns.scatterplot(x=
- 'petal_length'
- data=
- df, palette=
- , y=
- 'petal_width'
- , hue=
- custom_palette)
- plt.title(
- "Petal Length vs Petal Width")
- plt.show()
- 'species', 
+
+# Pairplot
+custom_palette_pairplot = {"setosa": "pink", "versicolor": "purple", "virginica": "yellow"}
+sns.pairplot(df, hue='species', palette=custom_palette_pairplot)
+plt.show()
+
+# Scatterplot
+custom_palette = {"setosa": "green", "versicolor": "grey", "virginica": "orange"}
+sns.scatterplot(x='petal_length', y='petal_width', hue='species', data=df, palette=custom_palette)
+plt.title("Petal Length vs Petal Width")
+plt.show() 
+
 STEP 6: CORRELATION ANALYSIS
  Correlation Analysis
  Correlation heatmaps display the linear relationships between numeric features.
- corr =
- df.corr(numeric_only=
- sns.heatmap(corr, annot=
- True)
- True
- , cmap=
- 'coolwarm')
- plt.title(
- "Correlation Heatmap")
- plt.show()
+corr = df.corr(numeric_only=True)
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title("Correlation Heatmap")
+plt.show()
 
  1- Petal length & petal width (correlation = 0.96)
  Strong positive correlation
@@ -200,32 +177,16 @@ points
 (boxplot inside)
  Understanding shape & spread of data
  Visual complexity Medium (smooth shapes)
- # Violin plot
- sns.violinplot(x=
- 'species'
- , y=
- No (individual points only)
- Shows every data point
- Seeing exact data point 
-distribution
- Higher (many points, can be 
-dense)
- 'sepal_length'
- , data=
- df)
- plt.title(
- "Violin Plot of Sepal Length by Species")
- plt.show()
- # Swarm plot
- sns.swarmplot(x=
- plt.show()
- 'species'
- , y=
- 'sepal_length'
- , data=
- plt.title(
- "Swarm Plot of Sepal Length by Species")
- df)
+# Violin plot
+sns.violinplot(x='species', y='sepal_length', data=df)
+plt.title("Violin Plot of Sepal Length by Species")
+plt.show()
+
+# Swarm plot
+sns.swarmplot(x='species', y='sepal_length', data=df)
+plt.title("Swarm Plot of Sepal Length by Species")
+plt.show()
+
 
 Step 8: Summary of Key Findings
  Feature Separation: Petal length and petal width show the most separation between species, 
@@ -236,41 +197,25 @@ relationship between features and species separation.
 features, while versicolor and virginica slightly overlap but are still distinguishable.
  These insights can help build classification models to predict species using features like petal 
 length and width.
- BONUS CHALLENGE: COMBINED VISUALIZATIONS
+ COMBINED VISUALIZATIONS
  Combined Visualizations
  # Create a FacetGrid with multiple subplots by species
- Spec1=
- sns.FacetGrid(df, col=
- "species")
- Spec1.map_dataframe(sns.histplot, x=
- plt.show()
- Spec2=
- "petal_length"
- sns.FacetGrid(df, col=
- "species")
- Spec2.map_dataframe(sns.histplot, x=
- , color=
- 'pink')
- "sepal_length"
- , color=
- 'purple')
+ Spec1= sns.FacetGrid(df, col="species")
+Spec1.map_dataframe(sns.histplot, x="petal_length", color='pink')
 plt.show()
- Spec3=
- sns.FacetGrid(df, col=
- "species")
- Spec3.map_dataframe(sns.histplot, x=
- plt.show()
- Spec4=
- plt.show()
- "petal_width"
- , color=
- 'red')
- sns.FacetGrid(df, col=
- "species")
- Spec4.map_dataframe(sns.histplot, x=
- "sepal_width"
- , color=
- 'yellow')
+
+Spec2= sns.FacetGrid(df, col="species")
+Spec2.map_dataframe(sns.histplot, x="sepal_length", color='purple')
+plt.show()
+
+Spec3= sns.FacetGrid(df, col="species")
+Spec3.map_dataframe(sns.histplot, x="petal_width", color='red')
+plt.show()
+
+Spec4= sns.FacetGrid(df, col="species")
+Spec4.map_dataframe(sns.histplot, x="sepal_width", color='yellow')
+plt.show()
+
 # Custom subplot combining histogram and scatterplot
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 df[df['species'] == 'setosa'].hist(column='petal_length', ax=axes[0], color='purple')
