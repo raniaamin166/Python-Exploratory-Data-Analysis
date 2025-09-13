@@ -132,7 +132,7 @@ STEP 5: EXPLORE PAIRWISE RELATIONSHIPS
  Pairplots and scatter plots help identify patterns and separations between species.
  Pairplot
  A pairplot is a grid of scatterplots that shows the pairwise relationships between multiple 
-features in the dataset. It’s a very handy way to explore how features interact and whether 
+features in the dataset. Its a very handy way to explore how features interact and whether 
 patterns emerge by class.
  Key Features:-It shows scatterplots for all possible feature pairs.-Diagonal plots often show histograms or KDEs (distributions) of each 
 feature.-It can be color-coded by a categorical variable like species using 
