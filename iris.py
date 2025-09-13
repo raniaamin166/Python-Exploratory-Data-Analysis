@@ -99,7 +99,7 @@ numeric feature using 5 key values.
  When we plot a boxplot of petal_length across species:-We can compare the central tendency and spread between species.-It visually shows how distinct the species are based on the feature.-Outliers, if any, will be clearly visible.
  Example Insight:-Setosa has a very small and tight box (low variation).-Versicolor shows moderate spread.-Virginica has the largest values and some variability.
 
-� Histogram vs Boxplot | Feature | Histogram | Boxplot | | -------------- | ------------------------------------------- | -------------------------------------------- | | Focus | 
+Histogram vs Boxplot | Feature | Histogram | Boxplot | | -------------- | ------------------------------------------- | -------------------------------------------- | | Focus | 
 Frequency distribution | Summary statistics (median, quartiles, etc.) | | Best for | Seeing overall 
 shape (normal, skewed, etc.) | Comparing distributions across groups | | Shows outliers | 🌼 No | 🌼 
 Yes | | Shows median | 🌼 No (only visually estimated) | 🌼 Yes |
