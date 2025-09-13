@@ -53,7 +53,7 @@ into intervals (bins) and counting how many data points fall into each bin.
  When we plot histograms for features like sepal_length, petal_length, etc., we are visualizing:
 -How the values are distributed (e.g., normal, skewed)-Where the concentration of values lies
  Example Insight:
- In a histogram of petal_length:-Setosa values are concentrated around 1–2 cm-Versicolor values appear in the 3–5 cm range-Virginica values fall around 5–7 cm
+ In a histogram of petal_length:-Setosa values are concentrated around 1,2 cm-Versicolor values appear in the 3,5 cm range-Virginica values fall around 5,7 cm
  This clearly shows class separation in petal length.
  Boxplot
  A boxplot (or box-and-whisker plot) is a statistical graph that summarizes the distribution of a 
