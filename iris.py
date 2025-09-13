@@ -50,7 +50,7 @@ within each species.
  A histogram is a plot that shows the distribution of a single numeric feature by dividing the data 
 into intervals (bins) and counting how many data points fall into each bin.
  In the Iris Dataset:
- When we plot histograms for features like sepal_length, petal_length, etc., we're visualizing:
+ When we plot histograms for features like sepal_length, petal_length, etc., we are visualizing:
 -How the values are distributed (e.g., normal, skewed)-Where the concentration of values lies
  Example Insight:
  In a histogram of petal_length:-Setosa values are concentrated around 1–2 cm-Versicolor values appear in the 3–5 cm range-Virginica values fall around 5–7 cm
